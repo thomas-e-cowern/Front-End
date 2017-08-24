@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    text-align: center;
+}
+
+.controls {
+    padding: 10px;
+}
+
+label {
+    padding-left: 25px;
+    padding-right: 10px;
+}
+
+canvas {
+    border-style: groove;
+/*
+    width: 800px;
+    height: 800px;
+*/
+}

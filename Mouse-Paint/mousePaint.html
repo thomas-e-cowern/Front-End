@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <h2>Mouse Painting</h2>
+
+    <div class="controls">
+        <!-- laying out the 3 controls, Width, Blur and Base Color and Eraser -->
+        <label id="spacingLabel" for="spacing">Width: 10 pixels</label>
+        <input id="spacing" type="range" name="spacing" min="10" max="200" value="0" data-sizing="px">
+
+        <label id="blurLabel" for="blur">Blur: 0 pixels</label>
+        <input id="blur" type="range" name="blur" min="0" max="100" value="0" data-sizing="px">
+
+        <label for="base">Writing Color</label>
+        <input id="base" type="color" name="base" value="#ffc600">
+
+        <label for="eraser">Eraser</label>
+        <button type="button" id="eraser" type="color" name="eraser" value="#FFFFFF">Erase at Will</button>
+
+        <label for="eraser">Clear Drawing</label>
+        <button type="button" id="eraseAll" type="color" name="eraseAll" value="#FFFFFF">Clear All</button>
+
+    </div>
+
+</head>
+
+<body>
+    <canvas id="draw" width="80%" height="80%"></canvas>
+    <!-- Establishes the canvas area for the page-->
+    
+
+</body>
+<script type="text/javascript" src="mousePaint.js"></script>
+</html>
