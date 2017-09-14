@@ -1,28 +1,46 @@
 <!doctype html>
 
-<html lang="en">
+<html lang="en"  ng-app="Santa">
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>Secret Santa Helper</title>
-  <meta name="Secret Santa Helper" content="Secret Santa Helper">
-  <meta name="author" content="Thomas E Cowern & Danielle Brown">
+    <title>Secret Santa Helper</title>
+    <meta name="Secret Santa Helper" content="Secret Santa Helper">
+    <meta name="author" content="Thomas E Cowern & Danielle Brown">
 
-<!--  <link rel="stylesheet" href="css/styles.css?v=1.0">-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
-<script src="controller.js"></script>
+    <!--  <link rel="stylesheet" href="css/styles.css?v=1.0">-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="controller.js"></script>
 
 </head>
 
-<body ng-app="Santa">
- 
+<body ng-controller="AppController as main">
+
+
+    <div>
+        {{ main.message }}
+
+    </div>
+
+    <div>
+        Enter a name for the Secret Santa gift program
+    </div>
+    <h1 ng-hide="hidden">
+        Please type a name before clicking the add button
+    </h1>
     
-<div ng-controller="appCtrl as main">
-    {{ main.message }}
-    
-</div>    
-     
-     
-  
+    <div>
+        <input id="name" type="text" placeholder="Enter a name">
+        <button ng-click="main.addName()">Add</button>
+        
+    </div>
+    <div ng-repeat="name in main.nameList">
+        {{ name }}
+        
+    </div>
+
+
+
+
 </body>
 </html>
